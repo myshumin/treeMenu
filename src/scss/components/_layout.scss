@@ -1,0 +1,23 @@
+body, html{
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	@extend body;
+	#tree_menu {
+		padding: 50px;
+		width: 50%;
+		height: 100%;
+		display: inline-block;
+		float: left;
+		overflow-y: auto;
+	}
+	#tree_form {
+		@extend #tree_menu;
+		border-left:1px solid $borderColor_tree_form;
+	}
+}
+.container{
+	background-color: $background_color_main;
+}

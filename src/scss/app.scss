@@ -1,0 +1,17 @@
+/**
+	页面基础部分
+ */
+/* 色值 */
+@import "components/variable";
+/* 基础css */
+@import "components/base";
+/* 布局 */
+@import "components/layout";
+
+/**
+	核心部分
+ */
+/* form */
+@import "components/tree_form";
+/* menu */
+@import "components/tree_menu";

@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/**
+	页面基础部分
+ */
+/* 色值 */
+/**
+	定义公共色值
+ */
+/**
+	定义公共引用
+ */
+/* 基础css */
+html, body, .container, div, ul, li, form {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  color: #B1B1B1;
+  line-height: 1.42857143; }
+
+ul {
+  list-style: none; }
+
+input, select {
+  vertical-align: middle; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; }
+
+ul, li, input, button, body, .container, div, select {
+  font-size: 14px; }
+
+/* 布局 */
+body, .container, html {
+  height: 100%;
+  width: 100%; }
+
+.container #tree_menu, .container #tree_form {
+  padding: 50px;
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  overflow-y: auto; }
+
+.container #tree_form {
+  border-left: 1px solid #5b5a4e; }
+
+.container {
+  background-color: #272822; }
+
+/**
+	核心部分
+ */
+/* form */
+#tree_form form {
+  width: 360px;
+  margin: 100px auto 0;
+  padding: 30px;
+  background-color: #3B3B3B; }
+  #tree_form form .form-group {
+    margin-bottom: 25px;
+    clear: both;
+    display: table;
+    width: 100%; }
+    #tree_form form .form-group label {
+      display: block;
+      width: 100%;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 16px; }
+    #tree_form form .form-group input[type=text], #tree_form form .form-group select {
+      display: block;
+      width: 100%;
+      height: 40px;
+      padding: 6px 12px;
+      border: 1px solid #696969;
+      border-radius: 3px;
+      background-color: rgba(250, 255, 189, 0.8);
+      color: #333; }
+    #tree_form form .form-group select, #tree_form form .form-group .radio input[type=radio], #tree_form form .form-group button {
+      cursor: pointer; }
+    #tree_form form .form-group .radio {
+      display: inline-block;
+      float: left;
+      width: 135px;
+      height: 40px;
+      border: 1px solid #696969;
+      border-radius: 3px;
+      text-align: center;
+      line-height: 40px;
+      position: relative;
+      overflow: hidden; }
+      #tree_form form .form-group .radio input[type=radio] {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 40px;
+        opacity: 0;
+        left: 0; }
+    #tree_form form .form-group .on {
+      border-color: #77C620;
+      color: #ffffff; }
+    #tree_form form .form-group .margin_left_30 {
+      margin-left: 30px; }
+    #tree_form form .form-group button {
+      width: 100%;
+      height: 45px;
+      background-color: #77C620;
+      color: #ffffff;
+      border-radius: 3px;
+      border: 0; }
+
+/* menu */
+#tree_menu ul li.file, .container #tree_form ul li.file {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABGxJREFUaAXtW0tvHEUQrpodWxEBDIEQfEGyN3GyjxBBIkAgpDgPOERCXECAkFD4AUhcQfZ2NoI7F8QPgANw4gCJEuKIEwKRAPKu48euEUS8El45oCB2posak0ibbvd2zz7smXhGK+10VXX193V1d/Xs9AJk183dA+hK7wN6Jlern3sFCV4khB1AsMm1bhw7RLjqAT5dKTfPxqnnautEWNTH7yNJ7xPAI66Oe7T72/dzR6YLjc969KNV9zSJIiAilATvriHZCMHmIAg/rtbHHlfg9Fy0Eq7Uxl8Gor437IB8c0j4SbWWf8zB1tnEShgQnnT21qUhz9s/uJ3v1eo8um4NgE6I2fyjqq7bsp0w4IPdOnetRwRXhvzhSUT8QatDdBshk57b3pf1w06YaIsGYgCCqV0L3+GwPwmIF1X3HOnbZShPivrYQ6oubtlOOK7HHuzFxOLyEHmTAPij7oZGpMRTYn58n65zl1gJc97iz9pdU7sbTc/D/Tyvf9JbpRFq0enqhfxeXecmsRJ2c9NfK1FqNjCHPLzhZ9Uzp8c7gkCerta3P6DqXMqJJBwBF4Xlxf8XMvhlFSJ3hhR+Wq1N7FlF11GUWMIRal7IFnzyD/Cs+lVlwSv7lgBaZ8T82P2qrlM50YQj4FO7ly54nncAAS9pRAjuogDPiLl8WdMZBIknHOEWpcYcz+mDHOnLKg9OWXfLkGZ4TpdU3WrlVBCOgItis+b7cJA3J7/pRGhrKOXM8dkdBV13oyQ1hCPY04Xl2Rz4h3j1/v1GGsBPq3RPC8KzYmFil6prL1sJE2992ius9/10efFbD/1DK/tvDQxtk63WzPH5nTs11TWBlbCp4nrKRWnpG/RyhxnDnxoOgtEg+PekJr8mSCXhCLsoNs77vneYh99fKjlOWVtV2fVyaglHBKYLzXM5xCd49b5ynZDt27cZrIWeo7StUhv7qJu2Ql6u+Ip2YyMu9RNBmCHfwrifcgHcq02qh3Q35DPCaq9xvktUHlbxxS1nEY7bY2mzzyKctojFxdvXPIye9+axUvP1uCBc7Cv1/Bsk5Wsutp1ssiHdqXduBp01wrzty/JwmiPd30VL0mivr0KMndmi0ZXnIqOBm6KvhCXQUWjBUbem18fKOofXB9bgWs0ID65vk+F5w0XYumhxEuajWY4XwtdI+IWjdSwzPvbwMP8M1NUr0vaGrITbjW33iN6JY+UB7qVJ9kx4ww3pjLBt2KZdv+Ei3NdFi0geqcyO3zuIUcC+uz65046nr4Q5bezh97SxD5q0AzLeO+dGo4cVhXVIR6dpO7tIl9ZKOF107GgzwvY+SreFNcL8akk/VpBwznzS56oJopUwPzqcN1VOrJyoYcJmJczZ4JSpclLl6MF7JmxWwuXSvnd4iHxpcpBA+edQfOltEy4r4Wfxw9D3h57jufyVyUlS5FFghnObnhcopAmT86ZC0H5f1i6+iihf4MNqed5VDeSPWiagRjnCP/wLxVI0jIvFvW9FATLasuI/1FYgzFieVeYAAAAASUVORK5CYII=) no-repeat left center; }
+
+#tree_menu ul .folder, .container #tree_form ul .folder {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAABFZJREFUaAXtms1rE0EUwN+bpM1H/UIUBPEgrVUR6ydKEQRPhSIU/Kyi/4AgeBKPxYuICt70KChVUvEiCN7EWq1fpVjFtikeFETQqkVNmra7zzeb7GTT3SRaYu1Mk0N2Mm939v3mvXkzbyYA1U+1B6o9oHMPoFQ+c7txnTVhnyOkZgRcUhEggglAGADES/H25J2KtFmBRtCBnbReEkG8Au0FNyHwRF37yJVg4ezWCsey/xKWedCGC3SvITK7aMFvE9KNg0WVqyWgutRYaGPlWpx5SwIJFs/88T9/UgDNynvKaSTK3WCafN4BY6qzPk0A0X9tSUR4T4C/Kv4eDhA8tw5zuzfjR0cS5dqfNeByilRCjojn40dGzpRqyzCXptOZzoYN8waYF084JWD3vAGWoOyyy+cVcCnYXIeUu8UsebgcDke+DBA85mllkKcvq9z9/1uONj0rpUNpYITXoRpxMHJgeLBUIzrJigJLy5oGKw1TFJjduHe6ZScSazZbFuy1gVaz3Nk8mOvWRQFjQNQbaz/ehdhhFweGwrGQ6mw4NWXZF3muC811SK9+ZGd/pW9dP0n3m1qKr7SE6HUfzHSubQIk7WBd/eWVDbUrPZo6WxSYKA9sC6tVN8t6YVUZoS3QpTlgfYgfGfro3khEO9yy1leCSDELK3fOAqIZwEjdwcAICjiVaFzJFl6ptWVzyhOIh8HAHMYVoAVmWJeBwiHyA/NG/GRsxao+BQz2znxZ5xKO1h5MvvVbGKkf9zwYV2hkhoUR6SEHYwoAzk9HRB1Svl3Ba13Abqm+D5j3qdX4nbh5Yz3vkS3UmjOnPPH4DQauRQVsCzOmI45LP+Kwtd8PjPg5un/4nbIo2UZEaN7H7cFDXU4uX+DSXneW0DagERFaEDju7LMw72ood6ZEc4zzvzlxAKY8bqaFsHAClg8YKKSA0/R1K6+wAtfaM33v/3iOjTYeXWA/d9+tXJoFdrQOlABsy4jxy6fTT7F1JOMD5g26N9g29MMVcAJpBDCff6vxK9mUhfm/GMqdHWg0I2CFRCgYmMkVMN1tXMbjd7WytqYFXkpORZZEn3jVVxYWoTxwJmXG+pk3Gvuw5VXBEW0WGGFMZhJuT1iWIRkSYoE7S76chfGZzCRcYN6ANSNgicKAJfly86wn4c9Saw/MiyiK1cUeKSPmCo6FOZKpgDWeqG/gKWnp9Bt1+83uOoB7B75N11uw+1KkRjx1BWQJ7a0rWThDUstJl01eeV0NSdw3OOpWkilbOp6EwWVzgPlLuXNWYEYOHAtHfBHaARbo2dJ5sa2GK7dkwfX95rwgiYfefAoiCHPUUhZOJX9u4oA1J/4EGqTsn9ZRwPzrPitqD3sOu9GMDEkg9riA068s8yw4bDBjh8PjtT5gbwX7vvZTkkC4GmnPL5O9fLLMjNkP/4F7Ufo7fOFz4Nxy05XocEWLs7shFHgtdvjYZXnSr4PWVR2rPVDtgb/vgd90gUUm+SZ04AAAAABJRU5ErkJggg==) no-repeat left top; }
+
+#tree_menu ul li.file, .container #tree_form ul li.file, #tree_menu ul .folder, .container #tree_form ul .folder {
+  cursor: pointer;
+  background-size: 20px;
+  padding-left: 30px;
+  line-height: 30px;
+  margin-bottom: 5px; }
+
+#tree_menu ul li span, .container #tree_form ul li span {
+  display: block; }
+  #tree_menu ul li span:hover, .container #tree_form ul li span:hover {
+    background-color: #5b5a4e; }

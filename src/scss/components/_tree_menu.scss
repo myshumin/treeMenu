@@ -1,0 +1,26 @@
+#tree_menu{
+	ul{
+		li.file{
+			background: url('/src/images/file.png') no-repeat left center;
+
+		}
+		.folder{
+			background: url('/src/images/floder.png') no-repeat left top;
+		}
+		li.file, .folder{
+			cursor: pointer;
+			background-size: 20px;
+			padding-left:30px;
+			line-height:30px;
+			margin-bottom: 5px;
+		}
+		li {
+			span{
+				display: block;
+				&:hover {
+					background-color: $borderColor_tree_form;
+				}
+			}
+		}
+	}
+}
